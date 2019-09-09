@@ -26,7 +26,9 @@ export default {
       compileTemplate: true,
       css: true
     }),
-    buble(),
+    buble({
+      exclude: 'node_modules/**' // only transpile our source code
+    }),
     terser({
       compress: {
         global_defs: {
